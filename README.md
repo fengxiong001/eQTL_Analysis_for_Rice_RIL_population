@@ -26,8 +26,8 @@ The raw data are available from the National Center for Biotechnology Informatio
 - b.	eTrait/phenotype data（BED format）:flag_leaf_eTrait.bed
 # Major steps
 ### Step 1: compressed and indexed raw data
-- sh Compression.sh
-#### Script content of Compression.sh
+       sh Compression.sh
+- Script content of Compression.sh
 ```ruby 
 bgzip eQTL_genotype.vcf
 tabix -p vcf eQTL_genotype.vcf.gz
@@ -35,14 +35,14 @@ bgzip flag_leaf_eTrait.bed
 tabix -p flag_leaf_eTrait.bed.gz
 ``` 
 ### Step 2: cis-eQTL identification with QTLtools
-- sh QTLtools_cis.sh
-#### Script content of QTLtools_cis.sh
+       sh QTLtools_cis.sh
+- Script content of QTLtools_cis.sh
 ```ruby 
 QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt
 ``` 
 ### Step 3: trans-eQTL identification with QTLtools
-- sh QTLtools_trans.sh
-#### Script content of QTLtools_trans.sh
+       sh QTLtools_trans.sh
+- Script content of QTLtools_trans.sh
 ```ruby 
 ##command 1 
 QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal --threshold 0.05 --out flag_leaf005.trans.nominal.hits.txt.gz
@@ -57,13 +57,13 @@ zcat flag_leaf005_trans_perm_*.hits.txt.gz | gzip -c > flag_leaf005_permutations
 Rscript runFDR_ftrans.R flag_leaf005.trans.nominal.hits.txt.gz flag_leaf005_permutations_all.txt.gz flag_leaf_trans_005_permutations_all.txt
 ``` 
 ### Step 4: D.	Draw Manhattan diagram with R script
-- sh get_Ehd1_eQTL_result.sh
-#### Script content of get_Ehd1_eQTL_result.sh
+       sh get_Ehd1_eQTL_result.sh
+- Script content of get_Ehd1_eQTL_result.sh
 ```ruby 
 zcat flag_leaf005.trans.nominal.hits.txt.gz | grep OsAffx.30643.1.S1_at > Ehd1_eQTL_result.txt
 ``` 
-- Rscript Manhattan.R
-#### Script content of Manhattan.R
+        Rscript Manhattan.R
+- Script content of Manhattan.R
 ```ruby 
 library('qqman')
 data <- read.table(" Ehd1_eQTL_result.txt ")
