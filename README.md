@@ -77,6 +77,6 @@ abline(h=-log10(6.12e-04), col="red", lty=2, lwd=3)
 ### You will get cis-eQTL results and trans-eQTL results files
 - flag_leaf_eTrait_cis_permutation.txt
 - flag_leaf005.trans.nominal.hits.txt.gz 
-- flag_leaf_trans_005_permutations_all.txt（ Compare to the “flag_leaf005.trans.nominal.hits.txt.gz”，this file has an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.）
+- flag_leaf_trans_005_permutations_all.txt（ Compare to the “flag_leaf005.trans.nominal.hits.txt.gz”,this file has an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.）
 ### Manhattan plot of OsAffx.30643.1.S1_at
 ![图片名称](https://github.com/ziongfen/protocol/blob/main/graphs/Manhattan_plot_of_OsAffx.30643.1.S1_at.png)
