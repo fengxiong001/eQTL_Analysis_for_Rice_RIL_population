@@ -1,5 +1,5 @@
 # protocol
-The bio-protocol eBook:Bioinformatics Recipes for Rice eQTL - data, code and workflows
+The bio-protocol eBook: Bioinformatics Recipes for Rice eQTL - data, code and workflows
 # Installation
 ## Running environment:
 The workflow was constructed based on the Linux system
