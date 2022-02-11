@@ -7,7 +7,7 @@ The bio-protocol eBook: Bioinformatics Recipes for Rice eQTL - data, code and wo
 * **3.input:** Here, we store the raw input data.
 * **4.lib:** The source code, functions, or algorithms used within the workflow.
 * **5.output:** The final output results of the workflow.
-* **6.workflow:** Step by step pipeline. It may contain some sub-directories.
+* **6.workflow:** Step by step pipeline. 
 # Installation
 ## Running environment:
 The workflow was constructed based on the Linux system
