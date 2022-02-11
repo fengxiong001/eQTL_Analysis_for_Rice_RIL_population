@@ -81,4 +81,4 @@ abline(h=-log10(6.12e-04), col="red", lty=2, lwd=3)
 ### Manhattan plot of OsAffx.30643.1.S1_at
 ![图片名称](https://github.com/ziongfen/protocol/blob/main/graphs/Manhattan_plot_of_OsAffx.30643.1.S1_at.png)
 # License
-It is a free and open source software, licensed under (choose a license from the suggested list: GPLv3, MIT, or CC BY 4.0).
+It is a free and open source software, licensed under (choose a license from the suggested list: [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt), [MIT](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md), or [CC BY 4.0](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/cc-by-4.0.txt)).
