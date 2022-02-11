@@ -1,17 +1,17 @@
 ![图片名称](https://camo.githubusercontent.com/9e54064fb698af20a2b6089b4f16ec3e31f31f72b47f15a5bb215bfd2e41d1b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c25323076332d626c75652e737667)
-# protocol
-The bio-protocol eBook: Bioinformatics Recipes for Rice eQTL - data, code and workflows
 # Data, Code and Workflows Guideline
-* **cache:** Here, it stores intermediate datasets or results that are generated during the preprocessing steps.
-* **graphs:** The graphs/figures produced during the analysis.
-* **input:** Here, we store the raw input data.
-* **lib:** The source code, functions, or algorithms used within the workflow.
-* **output:** The final output results of the workflow.
-* **workflow:** Step by step pipeline. 
+A comprehensive eQTL study requires first obtaining genetic markers as well as expression profiles for each individual in the population, then taking the expression of each target gene as a trait (termed an expression trait, eTrait) and determining whether some markers are statistically associated with the eTrait by association analysis, and finally identifying candidate genes or regulatory sequences around the associated markers through various additional evidence. Usually, eQTL can be classified into two types: cis and trans. A cis-acting eQTL is an eQTL for a gene that is localized around that gene, indicating that sequence differences around that gene result in changes in expression levels. A trans-acting eQTL is an eQTL that is positioned distantly from the target gene it regulates, indicating that the expression level of the target gene is genetically regulated by distal factors (e.g., upstream transcription factors). 
+>
+In the following protocol, we explain how to use QTLtools to identify cis- and trans- eQTL and use qqman to visualize the results.To guide eBook authors having a better sense of the workflow layout, here we briefly introduce the specific purposes of the dir system.
+
+1. **cache:** Here, it stores intermediate datasets or results that are generated during the preprocessing steps.
+2. **graphs:** The graphs/figures produced during the analysis.
+3. **input:** Here, we store the raw input data.
+4. **lib:** The source code, functions, or algorithms used within the workflow.
+5. **output:** The final output results of the workflow.
+6. **workflow:** Step by step pipeline. 
 # Installation
-## Running environment:
-The workflow was constructed based on the Linux system
-## Required software and versions:
+## Required software and installation:
 ### Installing Anaconda 
 - wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86.sh
 - bash Anaconda3-4.1.0-Linux-x86.sh
