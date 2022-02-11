@@ -1,3 +1,4 @@
+![图片名称](https://camo.githubusercontent.com/9e54064fb698af20a2b6089b4f16ec3e31f31f72b47f15a5bb215bfd2e41d1b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c25323076332d626c75652e737667)
 # protocol
 The bio-protocol eBook: Bioinformatics Recipes for Rice eQTL - data, code and workflows
 # Installation
