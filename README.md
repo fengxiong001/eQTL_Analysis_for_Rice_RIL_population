@@ -2,12 +2,12 @@
 # protocol
 The bio-protocol eBook: Bioinformatics Recipes for Rice eQTL - data, code and workflows
 # Data, Code and Workflows Guideline
-* **1.cache:** Here, it stores intermediate datasets or results that are generated during the preprocessing steps.
-* **2.graphs:** The graphs/figures produced during the analysis.
-* **3.input:** Here, we store the raw input data.
-* **4.lib:** The source code, functions, or algorithms used within the workflow.
-* **5.output:** The final output results of the workflow.
-* **6.workflow:** Step by step pipeline. 
+* **cache:** Here, it stores intermediate datasets or results that are generated during the preprocessing steps.
+* **graphs:** The graphs/figures produced during the analysis.
+* **input:** Here, we store the raw input data.
+* **lib:** The source code, functions, or algorithms used within the workflow.
+* **output:** The final output results of the workflow.
+* **workflow:** Step by step pipeline. 
 # Installation
 ## Running environment:
 The workflow was constructed based on the Linux system
