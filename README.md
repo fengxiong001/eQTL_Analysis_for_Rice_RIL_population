@@ -1,5 +1,5 @@
 # protocol
-The repository will be created and you will be authorized to be able to submit the code directly
+Bioinformatics Recipes for Rice eQTL - data, code and workflows
 # Installation
 ## Running environment:
 The workflow was constructed based on the Linux system
