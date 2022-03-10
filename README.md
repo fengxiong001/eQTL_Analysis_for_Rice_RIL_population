@@ -15,7 +15,7 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### Installing Anaconda 
 - wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86.sh
 - bash Anaconda3-4.1.0-Linux-x86.sh
-- echo 'export PATH="~/anaconda2/bin:$PATH"' >> ~/.bashrc
+- echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
 - source ~/.bashrc
 ### Installing Htslib
 - conda install -c bioconda htslib
@@ -28,6 +28,8 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### Installing QTLtools(download and unzip to use)
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
+- echo 'export PATH="~/QTLtools_1.2_CentOS7.8_x86_64:$PATH"' >> ~/.bashrc
+- source ~/.bashrc
 ### Note 
 the **“QTLtools”** mentioned in the latter command should be **“QTLtools_1.2_CentOS7.8_x86_64”**, which we have simplified in the latter part of the text
 # Input Data
