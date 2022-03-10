@@ -1,5 +1,5 @@
 ![图片名称](https://camo.githubusercontent.com/9e54064fb698af20a2b6089b4f16ec3e31f31f72b47f15a5bb215bfd2e41d1b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c25323076332d626c75652e737667)
-# Data, Code and Workflows Guideline
+# Identification of Expression QTL by QTLtools in a Rice Recombinant Inbred Line Population
 A comprehensive eQTL study requires first obtaining genetic markers as well as expression profiles for each individual in the population, then taking the expression of each target gene as a trait (termed an expression trait, eTrait) and determining whether some markers are statistically associated with the eTrait by association analysis, and finally identifying candidate genes or regulatory sequences around the associated markers through various additional evidence. Usually, eQTL can be classified into two types: cis and trans. A cis-acting eQTL is an eQTL for a gene that is localized around that gene, indicating that sequence differences around that gene result in changes in expression levels. A trans-acting eQTL is an eQTL that is positioned distantly from the target gene it regulates, indicating that the expression level of the target gene is genetically regulated by distal factors (e.g., upstream transcription factors). 
 >
 In the following protocol, we explain how to use QTLtools to identify cis- and trans- eQTL and use qqman to visualize the results.To guide eBook authors having a better sense of the workflow layout, here we briefly introduce the specific purposes of the dir system.
@@ -28,6 +28,8 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### Installing QTLtools(download and unzip to use)
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
+### Note 
+the command ####QTLtools#### mentioned in the latter should be ####QTLtools_1.2_CentOS7.8_x86_64####, which we have simplified in the latter
 # Input Data
 The raw data are available from the National Center for Biotechnology Information Gene Expression Omnibus database under the accession number GSE49020.
 - a.	Genotype data（VCF/BCF format）:eQTL_genotype.vcf
@@ -38,9 +40,9 @@ The raw data are available from the National Center for Biotechnology Informatio
 - Script content of Compression.sh
 ```ruby 
 bgzip eQTL_genotype.vcf
-tabix -p vcf eQTL_genotype.vcf.gz
+tabix vcf eQTL_genotype.vcf.gz
 bgzip flag_leaf_eTrait.bed 
-tabix -p flag_leaf_eTrait.bed.gz
+tabix flag_leaf_eTrait.bed.gz
 ``` 
 ### Step 2: cis-eQTL identification with QTLtools
        sh QTLtools_cis.sh
