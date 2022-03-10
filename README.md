@@ -29,7 +29,7 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 ### Note 
-the **QTLtools** mentioned in the latter command should be **QTLtools_1.2_CentOS7.8_x86_64**, which we have simplified in the latter part of the text
+the **“QTLtools”** mentioned in the latter command should be **“QTLtools_1.2_CentOS7.8_x86_64”**, which we have simplified in the latter part of the text
 # Input Data
 The raw data are available from the National Center for Biotechnology Information Gene Expression Omnibus database under the accession number GSE49020.
 - a.	Genotype data（VCF/BCF format）:eQTL_genotype.vcf
