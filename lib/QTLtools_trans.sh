@@ -1,9 +1,9 @@
 ##command 1 
-QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal --threshold 0.05 --out flag_leaf005.trans.nominal.hits.txt.gz
+QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal --threshold 0.05 --out flag_leaf005.trans.nominal.hits.txt.gz > running.log
 
 ##command 2
 for i in {1..100};do
-       QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --threshold 0.05 --permute --out flag_leaf005_trans_perm_${i} --seed ${i} 
+       QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --threshold 0.05 --permute --out flag_leaf005_trans_perm_${i} --seed ${i} > running.log
 done
 
 ##command 3
