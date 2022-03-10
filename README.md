@@ -29,7 +29,7 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 ### Note 
-the command ####QTLtools#### mentioned in the latter should be ####QTLtools_1.2_CentOS7.8_x86_64####, which we have simplified in the latter
+the **QTLtools** mentioned in the latter command should be **QTLtools_1.2_CentOS7.8_x86_64**, which we have simplified in the latter part of the text
 # Input Data
 The raw data are available from the National Center for Biotechnology Information Gene Expression Omnibus database under the accession number GSE49020.
 - a.	Genotype data（VCF/BCF format）:eQTL_genotype.vcf
@@ -48,7 +48,7 @@ tabix flag_leaf_eTrait.bed.gz
        sh QTLtools_cis.sh
 - Script content of QTLtools_cis.sh
 ```ruby 
-QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt
+QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt > running.log
 ``` 
 ### Step 3: trans-eQTL identification with QTLtools
 The command 1 will generate three output files, one named “*.best.txt.gz” containing the top eQTL for each eTrait, one named “*.bins.txt.gz” containing all eQTLs with P-values below the specified threshold, and the last named “*.hits.txt.gz”, containing the details of all eQTLs with P-values above the specified threshold. The command 2 permutes all eTraits and generate three files like the command 1. The command 3 will generate the file “flag_leaf_trans_005_permutations_all.txt” which contains the data in “*.hits.txt.gz” and with an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.
@@ -57,18 +57,18 @@ The command 1 will generate three output files, one named “*.best.txt.gz” co
 - Script content of QTLtools_trans.sh
 ```ruby 
 ##command 1 
-QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal --threshold 0.05 --out flag_leaf005.trans.nominal.hits.txt.gz
+QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal --threshold 0.05 --out flag_leaf005.trans.nominal.hits.txt.gz > running.log
 
 ##command 2
 for i in {1..100};do
-       QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --threshold 0.05 --permute --out flag_leaf005_trans_perm_${i} --seed ${i} 
+       QTLtools trans --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --threshold 0.05 --permute --out flag_leaf005_trans_perm_${i} --seed ${i} > running.log
 done
 
 ##command 3
 zcat flag_leaf005_trans_perm_*.hits.txt.gz | gzip -c > flag_leaf005_permutations_all.txt.gz
 Rscript runFDR_ftrans.R flag_leaf005.trans.nominal.hits.txt.gz flag_leaf005_permutations_all.txt.gz flag_leaf_trans_005_permutations_all.txt
 ``` 
-### Step 4: D.	Draw Manhattan diagram with R script
+### Step 4: Draw Manhattan diagram with R script
        sh get_Ehd1_eQTL_result.sh
 - Script content of get_Ehd1_eQTL_result.sh
 ```ruby 
