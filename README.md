@@ -28,6 +28,8 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### Installing QTLtools(download and unzip to use)
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
+- cd QTLtools_1.2_CentOS7.8_x86_64
+- ln -s QTLtools_1.2_CentOS7.8_x86_64 QTLtools
 - echo 'export PATH="~/QTLtools_1.2_CentOS7.8_x86_64:$PATH"' >> ~/.bashrc
 - source ~/.bashrc
 ### Note 
