@@ -17,6 +17,9 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 - bash Anaconda3-4.1.0-Linux-x86.sh
 - echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
 - source ~/.bashrc
+### conda environment
+- conda create -n eQTL_Analysis_for_Rice_RIL_population
+- conda activate eQTL_Analysis_for_Rice_RIL_population
 ### Installing Htslib
 - conda install -c bioconda htslib
 ### Installing Bcftools
