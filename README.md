@@ -35,8 +35,6 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 - ln -s QTLtools_1.2_CentOS7.8_x86_64 QTLtools
 - echo 'export PATH="~/QTLtools_1.2_CentOS7.8_x86_64:$PATH"' >> ~/.bashrc
 - source ~/.bashrc
-### Note 
-the **“QTLtools”** mentioned in the latter command should be **“QTLtools_1.2_CentOS7.8_x86_64”**, which we have simplified in the latter part of the text
 # Input Data
 The raw data are available from the National Center for Biotechnology Information Gene Expression Omnibus database under the accession number GSE49020.
 - a.	Genotype data（VCF/BCF format）:eQTL_genotype.vcf
