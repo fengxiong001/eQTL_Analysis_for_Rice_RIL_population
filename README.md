@@ -20,15 +20,15 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### conda environment
 - conda create -n eQTL_Analysis_for_Rice_RIL_population
 - conda activate eQTL_Analysis_for_Rice_RIL_population
-### Installing Htslib
+### Installing [Htslib](https://github.com/samtools/htslib/releases/download/1.12/htslib-1.12.tar.bz2)
 - conda install -c bioconda htslib
-### Installing Bcftools
+### Installing [Bcftools](https://github.com/samtools/bcftools/releases/download/1.12/ bcftools-1.12.tar.bz2)
 - conda install -c bioconda bcftools
-### Installing Samtools
+### Installing [Samtools](https://github.com/samtools/samtools/releases/download/1.12 /samtools-1.12.tar.bz2)
 - conda install -c bioconda samtools 
-### Installing R 3.6.1
+### Installing [R 3.6.1](http://www.R-project.org/)
 - conda install r-base=3.6.1
-### Installing QTLtools(download and unzip to use)
+### Installing [QTLtools](https://qtltools.github.io/qtltools/)(download and unzip to use)
 - wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
 - cd QTLtools_1.2_CentOS7.8_x86_64
