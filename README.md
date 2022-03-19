@@ -20,11 +20,11 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 ### conda environment
 - conda create -n eQTL_Analysis_for_Rice_RIL_population
 - conda activate eQTL_Analysis_for_Rice_RIL_population
-### Installing [Htslib](https://github.com/samtools/htslib/releases/download/1.12/htslib-1.12.tar.bz2)
+### Installing [Htslib](https://github.com/samtools/htslib/)
 - conda install -c bioconda htslib
-### Installing [Bcftools](https://github.com/samtools/bcftools/releases/download/1.12/ bcftools-1.12.tar.bz2)
+### Installing [Bcftools](https://github.com/samtools/bcftools/)
 - conda install -c bioconda bcftools
-### Installing [Samtools](https://github.com/samtools/samtools/releases/download/1.12 /samtools-1.12.tar.bz2)
+### Installing [Samtools](https://github.com/samtools/samtools/)
 - conda install -c bioconda samtools 
 ### Installing [R 3.6.1](http://www.R-project.org/)
 - conda install r-base=3.6.1
@@ -91,7 +91,7 @@ library('qqman')
 data <- read.table(" Ehd1_eQTL_result.txt ")
 data <-data[,c(4,5,6,7)]
 colnames(data)<-c('SNP','CHR','BP','P')
-manhattan(data, suggestiveline = FALSE, genomewideline = FALSE , annotatePval = 5e-40, annotateTop = FALSE,ylim=c(0,50),cex = 0.9, cex.axis = 0.9)
+manhattan(data,main = "Manhattan Plot",suggestiveline =FALSE,genomewideline = FALSE,csi=1.5,cex.lab=1.5, cex.axis=1.5,cex.main=1.5,annotatePval = 5e-40, annotateTop = FALSE,xlim=c(32284500,155000000),ylim=c(0,50),cex = 1.5)
 abline(h=-log10(6.17e-04), col="blue", lty=1, lwd=3) 
 abline(h=-log10(6.12e-04), col="red", lty=2, lwd=3)
 ``` 
