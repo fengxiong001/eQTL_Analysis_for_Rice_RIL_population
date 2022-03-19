@@ -12,7 +12,7 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 6. **workflow:** Step by step pipeline. 
 # Installation
 ## Required software and installation:
-### Installing Anaconda 
+### Installing [Anaconda](https://www.anaconda.com/) 
 - wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86.sh
 - bash Anaconda3-4.1.0-Linux-x86.sh
 - echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
